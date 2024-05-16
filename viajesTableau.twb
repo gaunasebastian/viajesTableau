@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 20241.24.0425.1340                               -->
-<workbook original-version='18.1' source-build='2024.1.2 (20241.24.0425.1340)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook original-version='18.1' source-build='2024.1.2 (20241.24.0425.1340)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
     <_.fcp.MarkAnimation.true...MarkAnimation />
@@ -13,6 +13,7 @@
     <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
+  <repository-location id='viajesTableau' path='/workbooks' revision='1.2' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -23,123 +24,48 @@
     </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
   </_.fcp.AnimationOnByDefault.false...style>
   <datasources>
-    <datasource caption='Worksheet+ (Multiple Connections)' inline='true' name='federated.1g8x3k311pdut91fyob0m0v3ftaw' version='18.1'>
+    <datasource caption='dataset_viajes_sube (dataset_viajes_sube)' inline='true' name='federated.1bzd1mz0xhiuqd1b50bzz16uvtqs' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='Ventas_Call' name='excel-direct.1hjlnbh0vb4xy512pmvsg0kap06q'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Agustín Gauna/Documents/GitHub/callcenter/Ventas_Call.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-          <named-connection caption='Dotacion_Call' name='excel-direct.0dhqzj108wb8v013ykj6o1217tt4'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Agustín Gauna/Documents/GitHub/callcenter/Dotacion_Call.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          <named-connection caption='dataset_viajes_sube' name='excel-direct.05diyh808k51rw1bl2ahj0z6jai3'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Agustín Gauna/Documents/GitHub/viajesTableau/dataset_viajes_sube.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0dhqzj108wb8v013ykj6o1217tt4' name='Dotacion' table='[Dotacion$]' type='table'>
-          <columns gridOrigin='A1:Z16:no:A1:Z16:0' header='yes' outcome='2'>
-            <column datatype='date' name='Mes Dotacion' ordinal='0' />
-            <column datatype='string' name='Antiguedad (Meses)' ordinal='1' />
-            <column datatype='string' name='Apellido y Nombre' ordinal='2' />
-            <column datatype='string' name='Apellido' ordinal='3' />
-            <column datatype='string' name='Nombre' ordinal='4' />
-            <column datatype='integer' name='Documento' ordinal='5' />
-            <column datatype='string' name='CUIL/CUIT' ordinal='6' />
-            <column datatype='string' name='Nacionalidad' ordinal='7' />
-            <column datatype='string' name='Legajo' ordinal='8' />
-            <column datatype='string' name='Puesto' ordinal='9' />
-            <column datatype='date' name='Fecha Nacimiento' ordinal='10' />
-            <column datatype='date' name='Fecha Ingreso EMPRESA' ordinal='11' />
-            <column datatype='date' name='Fecha Ingreso CAMPAÑA' ordinal='12' />
-            <column datatype='string' name='Supervisor' ordinal='13' />
-            <column datatype='string' name='Coordinador' ordinal='14' />
-            <column datatype='string' name='Turno' ordinal='15' />
-            <column datatype='string' name='Jornada' ordinal='16' />
-            <column datatype='integer' name='Carga Horaria' ordinal='17' />
-            <column datatype='string' name='Campaña' ordinal='18' />
-            <column datatype='integer' name='ID EMPRESA' ordinal='19' />
-            <column datatype='string' name='Estado' ordinal='20' />
-            <column datatype='date' name='Fecha Baja o Lic' ordinal='21' />
-            <column datatype='real' name='Proporcional x Presentismo' ordinal='22' />
-            <column datatype='real' name='Proporcional x Curva' ordinal='23' />
-            <column datatype='string' name='MODALIDAD DE TRABAJO' ordinal='24' />
-            <column datatype='string' name='User Plataforma' ordinal='25' />
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.05diyh808k51rw1bl2ahj0z6jai3' name='dataset_viajes_sube' table='[dataset_viajes_sube$]' type='table'>
+          <columns gridOrigin='A1:C820:no:A1:C820:0' header='yes' outcome='6'>
+            <column datatype='string' name='TIPO_TRANSPORTE' ordinal='0' />
+            <column datatype='date' name='DIA' ordinal='1' />
+            <column datatype='integer' name='CANTIDAD' ordinal='2' />
           </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
-          <relation connection='excel-direct.1hjlnbh0vb4xy512pmvsg0kap06q' name='Worksheet' table='[Worksheet$]' type='table'>
-            <columns gridOrigin='A1:F8067:no:A1:F8067:0' header='yes' lost='0' outcome='2' processed='8635'>
-              <column datatype='string' name='Fecha Operación' ordinal='0' />
-              <column datatype='string' name='Hora Operación' ordinal='1' />
-              <column datatype='integer' name='payment_id' ordinal='2' />
-              <column datatype='string' name='payment_status' ordinal='3' />
-              <column datatype='string' name='payment_status_detail' ordinal='4' />
-              <column datatype='string' name='Legajo Vendedor' ordinal='5' />
-            </columns>
-          </relation>
-          <relation connection='excel-direct.0dhqzj108wb8v013ykj6o1217tt4' name='Dotacion' table='[Dotacion$]' type='table'>
-            <columns gridOrigin='A1:Z16:no:A1:Z16:0' header='yes' outcome='2'>
-              <column datatype='date' name='Mes Dotacion' ordinal='0' />
-              <column datatype='string' name='Antiguedad (Meses)' ordinal='1' />
-              <column datatype='string' name='Apellido y Nombre' ordinal='2' />
-              <column datatype='string' name='Apellido' ordinal='3' />
-              <column datatype='string' name='Nombre' ordinal='4' />
-              <column datatype='integer' name='Documento' ordinal='5' />
-              <column datatype='string' name='CUIL/CUIT' ordinal='6' />
-              <column datatype='string' name='Nacionalidad' ordinal='7' />
-              <column datatype='string' name='Legajo' ordinal='8' />
-              <column datatype='string' name='Puesto' ordinal='9' />
-              <column datatype='date' name='Fecha Nacimiento' ordinal='10' />
-              <column datatype='date' name='Fecha Ingreso EMPRESA' ordinal='11' />
-              <column datatype='date' name='Fecha Ingreso CAMPAÑA' ordinal='12' />
-              <column datatype='string' name='Supervisor' ordinal='13' />
-              <column datatype='string' name='Coordinador' ordinal='14' />
-              <column datatype='string' name='Turno' ordinal='15' />
-              <column datatype='string' name='Jornada' ordinal='16' />
-              <column datatype='integer' name='Carga Horaria' ordinal='17' />
-              <column datatype='string' name='Campaña' ordinal='18' />
-              <column datatype='integer' name='ID EMPRESA' ordinal='19' />
-              <column datatype='string' name='Estado' ordinal='20' />
-              <column datatype='date' name='Fecha Baja o Lic' ordinal='21' />
-              <column datatype='real' name='Proporcional x Presentismo' ordinal='22' />
-              <column datatype='real' name='Proporcional x Curva' ordinal='23' />
-              <column datatype='string' name='MODALIDAD DE TRABAJO' ordinal='24' />
-              <column datatype='string' name='User Plataforma' ordinal='25' />
-            </columns>
-          </relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.05diyh808k51rw1bl2ahj0z6jai3' name='dataset_viajes_sube' table='[dataset_viajes_sube$]' type='table'>
+          <columns gridOrigin='A1:C820:no:A1:C820:0' header='yes' outcome='6'>
+            <column datatype='string' name='TIPO_TRANSPORTE' ordinal='0' />
+            <column datatype='date' name='DIA' ordinal='1' />
+            <column datatype='integer' name='CANTIDAD' ordinal='2' />
+          </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
         <metadata-records>
           <metadata-record class='capability'>
             <remote-name />
             <remote-type>0</remote-type>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>5</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:F8067:no:A1:F8067:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>2</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[Dotacion]</parent-name>
+            <parent-name>[dataset_viajes_sube]</parent-name>
             <remote-alias />
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
             <attributes>
               <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:Z16:no:A1:Z16:0&quot;</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C820:no:A1:C820:0&quot;</attribute>
               <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>2</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
             </attributes>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Fecha Operación</remote-name>
+            <remote-name>TIPO_TRANSPORTE</remote-name>
             <remote-type>130</remote-type>
-            <local-name>[Fecha Operación]</local-name>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias>Fecha Operación</remote-alias>
+            <local-name>[TIPO_TRANSPORTE]</local-name>
+            <parent-name>[dataset_viajes_sube]</parent-name>
+            <remote-alias>TIPO_TRANSPORTE</remote-alias>
             <ordinal>0</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -148,30 +74,29 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Hora Operación</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Hora Operación]</local-name>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias>Hora Operación</remote-alias>
+            <remote-name>DIA</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DIA]</local-name>
+            <parent-name>[dataset_viajes_sube]</parent-name>
+            <remote-alias>DIA</remote-alias>
             <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
             <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>payment_id</remote-name>
+            <remote-name>CANTIDAD</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[payment_id]</local-name>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias>payment_id</remote-alias>
+            <local-name>[CANTIDAD]</local-name>
+            <parent-name>[dataset_viajes_sube]</parent-name>
+            <remote-alias>CANTIDAD</remote-alias>
             <ordinal>2</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
@@ -179,1122 +104,179 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>payment_status</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[payment_status]</local-name>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias>payment_status</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>payment_status_detail</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[payment_status_detail]</local-name>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias>payment_status_detail</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Legajo Vendedor</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Legajo Vendedor]</local-name>
-            <parent-name>[Worksheet]</parent-name>
-            <remote-alias>Legajo Vendedor</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Mes Dotacion</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[Mes Dotacion]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Mes Dotacion</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Antiguedad (Meses)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Antiguedad (Meses)]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Antiguedad (Meses)</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Apellido y Nombre</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Apellido y Nombre]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Apellido y Nombre</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Apellido</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Apellido]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Apellido</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Nombre</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Nombre]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Nombre</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Documento</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Documento]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Documento</remote-alias>
-            <ordinal>11</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>CUIL/CUIT</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[CUIL/CUIT]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>CUIL/CUIT</remote-alias>
-            <ordinal>12</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Nacionalidad</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Nacionalidad]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Nacionalidad</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Legajo</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Legajo]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Legajo</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Puesto</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Puesto]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Puesto</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Fecha Nacimiento</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[Fecha Nacimiento]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Fecha Nacimiento</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Fecha Ingreso EMPRESA</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[Fecha Ingreso EMPRESA]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Fecha Ingreso EMPRESA</remote-alias>
-            <ordinal>17</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Fecha Ingreso CAMPAÑA</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[Fecha Ingreso CAMPAÑA]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Fecha Ingreso CAMPAÑA</remote-alias>
-            <ordinal>18</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Supervisor</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Supervisor]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Supervisor</remote-alias>
-            <ordinal>19</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Coordinador</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Coordinador]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Coordinador</remote-alias>
-            <ordinal>20</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Turno</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Turno]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Turno</remote-alias>
-            <ordinal>21</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Jornada</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Jornada]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Jornada</remote-alias>
-            <ordinal>22</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Carga Horaria</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Carga Horaria]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Carga Horaria</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Campaña</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Campaña]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Campaña</remote-alias>
-            <ordinal>24</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>ID EMPRESA</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[ID EMPRESA]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>ID EMPRESA</remote-alias>
-            <ordinal>25</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Estado</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Estado]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Estado</remote-alias>
-            <ordinal>26</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Fecha Baja o Lic</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[Fecha Baja o Lic]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Fecha Baja o Lic</remote-alias>
-            <ordinal>27</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Proporcional x Presentismo</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Proporcional x Presentismo]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Proporcional x Presentismo</remote-alias>
-            <ordinal>28</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Proporcional x Curva</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Proporcional x Curva]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>Proporcional x Curva</remote-alias>
-            <ordinal>29</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>MODALIDAD DE TRABAJO</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[MODALIDAD DE TRABAJO]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>MODALIDAD DE TRABAJO</remote-alias>
-            <ordinal>30</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>User Plataforma</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[User Plataforma]</local-name>
-            <parent-name>[Dotacion]</parent-name>
-            <remote-alias>User Plataforma</remote-alias>
-            <ordinal>31</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='Cuil/Cuit' datatype='string' name='[CUIL/CUIT]' role='dimension' type='nominal' />
-      <column datatype='string' name='[Estado]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='Id Empresa' datatype='integer' name='[ID EMPRESA]' role='dimension' type='ordinal' />
-      <column caption='Modalidad De Trabajo' datatype='string' name='[MODALIDAD DE TRABAJO]' role='dimension' type='nominal' />
-      <_.fcp.ObjectModelTableType.true...column caption='Dotacion' datatype='table' name='[__tableau_internal_object_id__].[Dotacion_A4EAB106DACB48118018148E72452D36]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='Worksheet' datatype='table' name='[__tableau_internal_object_id__].[Worksheet_787C466E6273409B9633C37D32C8CE43]' role='measure' type='quantitative' />
-      <column caption='Payment Id' datatype='integer' name='[payment_id]' role='dimension' type='ordinal' />
-      <column caption='Payment Status' datatype='string' name='[payment_status]' role='dimension' type='nominal' />
-      <column caption='Payment Status Detail' datatype='string' name='[payment_status_detail]' role='dimension' type='nominal' />
+      <column caption='Cantidad' datatype='integer' name='[CANTIDAD]' role='measure' type='quantitative' />
+      <column caption='Tipo Transporte' datatype='string' name='[TIPO_TRANSPORTE]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='dataset_viajes_sube' datatype='table' name='[__tableau_internal_object_id__].[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]' role='measure' type='quantitative' />
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AGUSTN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_00pka8t0j498zx17wjkls1fusz5x.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/09/2024 11:24:43 PM' username='tableau_internal_user'>
-          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Dotacion_A4EAB106DACB48118018148E72452D36' table='[Extract].[Dotacion_A4EAB106DACB48118018148E72452D36]' type='table' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
-            <relation name='Worksheet_787C466E6273409B9633C37D32C8CE43' table='[Extract].[Worksheet_787C466E6273409B9633C37D32C8CE43]' type='table' />
-            <relation name='Dotacion_A4EAB106DACB48118018148E72452D36' table='[Extract].[Dotacion_A4EAB106DACB48118018148E72452D36]' type='table' />
-          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AGUSTN~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0y2ndhw1cj4zvh12wg6y30solyka.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/16/2024 12:42:07 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
           <metadata-records>
             <metadata-record class='column'>
-              <remote-name>Fecha Operación</remote-name>
+              <remote-name>TIPO_TRANSPORTE</remote-name>
               <remote-type>129</remote-type>
-              <local-name>[Fecha Operación]</local-name>
-              <parent-name>[Worksheet_787C466E6273409B9633C37D32C8CE43]</parent-name>
-              <remote-alias>Fecha Operación</remote-alias>
+              <local-name>[TIPO_TRANSPORTE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TIPO_TRANSPORTE</remote-alias>
               <ordinal>0</ordinal>
-              <family>Worksheet</family>
+              <family>dataset_viajes_sube</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
-              <approx-count>20</approx-count>
+              <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
-              <remote-name>Hora Operación</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Hora Operación]</local-name>
-              <parent-name>[Worksheet_787C466E6273409B9633C37D32C8CE43]</parent-name>
-              <remote-alias>Hora Operación</remote-alias>
+              <remote-name>DIA</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[DIA]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DIA</remote-alias>
               <ordinal>1</ordinal>
-              <family>Worksheet</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>882</approx-count>
+              <family>dataset_viajes_sube</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>265</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
-              <remote-name>payment_id</remote-name>
+              <remote-name>CANTIDAD</remote-name>
               <remote-type>20</remote-type>
-              <local-name>[payment_id]</local-name>
-              <parent-name>[Worksheet_787C466E6273409B9633C37D32C8CE43]</parent-name>
-              <remote-alias>payment_id</remote-alias>
+              <local-name>[CANTIDAD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CANTIDAD</remote-alias>
               <ordinal>2</ordinal>
-              <family>Worksheet</family>
+              <family>dataset_viajes_sube</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>8066</approx-count>
+              <approx-count>779</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>payment_status</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[payment_status]</local-name>
-              <parent-name>[Worksheet_787C466E6273409B9633C37D32C8CE43]</parent-name>
-              <remote-alias>payment_status</remote-alias>
-              <ordinal>3</ordinal>
-              <family>Worksheet</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>3</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>payment_status_detail</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[payment_status_detail]</local-name>
-              <parent-name>[Worksheet_787C466E6273409B9633C37D32C8CE43]</parent-name>
-              <remote-alias>payment_status_detail</remote-alias>
-              <ordinal>4</ordinal>
-              <family>Worksheet</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>5</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Legajo Vendedor</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Legajo Vendedor]</local-name>
-              <parent-name>[Worksheet_787C466E6273409B9633C37D32C8CE43]</parent-name>
-              <remote-alias>Legajo Vendedor</remote-alias>
-              <ordinal>5</ordinal>
-              <family>Worksheet</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Worksheet_787C466E6273409B9633C37D32C8CE43]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Mes Dotacion</remote-name>
-              <remote-type>133</remote-type>
-              <local-name>[Mes Dotacion]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Mes Dotacion</remote-alias>
-              <ordinal>6</ordinal>
-              <family>Dotacion</family>
-              <local-type>date</local-type>
-              <aggregation>Year</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Antiguedad (Meses)</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Antiguedad (Meses)]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Antiguedad (Meses)</remote-alias>
-              <ordinal>7</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>4</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Apellido y Nombre</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Apellido y Nombre]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Apellido y Nombre</remote-alias>
-              <ordinal>8</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Apellido</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Apellido]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Apellido</remote-alias>
-              <ordinal>9</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>13</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Nombre</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Nombre]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Nombre</remote-alias>
-              <ordinal>10</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Documento</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[Documento]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Documento</remote-alias>
-              <ordinal>11</ordinal>
-              <family>Dotacion</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>CUIL/CUIT</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[CUIL/CUIT]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>CUIL/CUIT</remote-alias>
-              <ordinal>12</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Nacionalidad</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Nacionalidad]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Nacionalidad</remote-alias>
-              <ordinal>13</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>7</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Legajo</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Legajo]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Legajo</remote-alias>
-              <ordinal>14</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Puesto</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Puesto]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Puesto</remote-alias>
-              <ordinal>15</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Fecha Nacimiento</remote-name>
-              <remote-type>133</remote-type>
-              <local-name>[Fecha Nacimiento]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Fecha Nacimiento</remote-alias>
-              <ordinal>16</ordinal>
-              <family>Dotacion</family>
-              <local-type>date</local-type>
-              <aggregation>Year</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Fecha Ingreso EMPRESA</remote-name>
-              <remote-type>133</remote-type>
-              <local-name>[Fecha Ingreso EMPRESA]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Fecha Ingreso EMPRESA</remote-alias>
-              <ordinal>17</ordinal>
-              <family>Dotacion</family>
-              <local-type>date</local-type>
-              <aggregation>Year</aggregation>
-              <approx-count>7</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Fecha Ingreso CAMPAÑA</remote-name>
-              <remote-type>133</remote-type>
-              <local-name>[Fecha Ingreso CAMPAÑA]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Fecha Ingreso CAMPAÑA</remote-alias>
-              <ordinal>18</ordinal>
-              <family>Dotacion</family>
-              <local-type>date</local-type>
-              <aggregation>Year</aggregation>
-              <approx-count>7</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Supervisor</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Supervisor]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Supervisor</remote-alias>
-              <ordinal>19</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>3</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Coordinador</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Coordinador]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Coordinador</remote-alias>
-              <ordinal>20</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Turno</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Turno]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Turno</remote-alias>
-              <ordinal>21</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Jornada</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Jornada]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Jornada</remote-alias>
-              <ordinal>22</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Carga Horaria</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[Carga Horaria]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Carga Horaria</remote-alias>
-              <ordinal>23</ordinal>
-              <family>Dotacion</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Campaña</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Campaña]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Campaña</remote-alias>
-              <ordinal>24</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>ID EMPRESA</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[ID EMPRESA]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>ID EMPRESA</remote-alias>
-              <ordinal>25</ordinal>
-              <family>Dotacion</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Estado</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Estado]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Estado</remote-alias>
-              <ordinal>26</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>4</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Fecha Baja o Lic</remote-name>
-              <remote-type>133</remote-type>
-              <local-name>[Fecha Baja o Lic]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Fecha Baja o Lic</remote-alias>
-              <ordinal>27</ordinal>
-              <family>Dotacion</family>
-              <local-type>date</local-type>
-              <aggregation>Year</aggregation>
-              <approx-count>5</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Proporcional x Presentismo</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[Proporcional x Presentismo]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Proporcional x Presentismo</remote-alias>
-              <ordinal>28</ordinal>
-              <family>Dotacion</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>3</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Proporcional x Curva</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[Proporcional x Curva]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>Proporcional x Curva</remote-alias>
-              <ordinal>29</ordinal>
-              <family>Dotacion</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>5</approx-count>
-              <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>MODALIDAD DE TRABAJO</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[MODALIDAD DE TRABAJO]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>MODALIDAD DE TRABAJO</remote-alias>
-              <ordinal>30</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>User Plataforma</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[User Plataforma]</local-name>
-              <parent-name>[Dotacion_A4EAB106DACB48118018148E72452D36]</parent-name>
-              <remote-alias>User Plataforma</remote-alias>
-              <ordinal>31</ordinal>
-              <family>Dotacion</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>15</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='1' name='LEN_RGB_S2' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dotacion_A4EAB106DACB48118018148E72452D36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
           </metadata-records>
         </connection>
       </extract>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Argentina&quot;' />
       </semantic-values>
       <date-options start-of-week='monday' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='Dotacion' id='Dotacion_A4EAB106DACB48118018148E72452D36'>
+          <object caption='dataset_viajes_sube' id='dataset!viajes!sube_2D42F762B3F3433F9520629C421BBFBE'>
             <properties context=''>
-              <relation connection='excel-direct.0dhqzj108wb8v013ykj6o1217tt4' name='Dotacion' table='[Dotacion$]' type='table'>
-                <columns gridOrigin='A1:Z16:no:A1:Z16:0' header='yes' outcome='2'>
-                  <column datatype='date' name='Mes Dotacion' ordinal='0' />
-                  <column datatype='string' name='Antiguedad (Meses)' ordinal='1' />
-                  <column datatype='string' name='Apellido y Nombre' ordinal='2' />
-                  <column datatype='string' name='Apellido' ordinal='3' />
-                  <column datatype='string' name='Nombre' ordinal='4' />
-                  <column datatype='integer' name='Documento' ordinal='5' />
-                  <column datatype='string' name='CUIL/CUIT' ordinal='6' />
-                  <column datatype='string' name='Nacionalidad' ordinal='7' />
-                  <column datatype='string' name='Legajo' ordinal='8' />
-                  <column datatype='string' name='Puesto' ordinal='9' />
-                  <column datatype='date' name='Fecha Nacimiento' ordinal='10' />
-                  <column datatype='date' name='Fecha Ingreso EMPRESA' ordinal='11' />
-                  <column datatype='date' name='Fecha Ingreso CAMPAÑA' ordinal='12' />
-                  <column datatype='string' name='Supervisor' ordinal='13' />
-                  <column datatype='string' name='Coordinador' ordinal='14' />
-                  <column datatype='string' name='Turno' ordinal='15' />
-                  <column datatype='string' name='Jornada' ordinal='16' />
-                  <column datatype='integer' name='Carga Horaria' ordinal='17' />
-                  <column datatype='string' name='Campaña' ordinal='18' />
-                  <column datatype='integer' name='ID EMPRESA' ordinal='19' />
-                  <column datatype='string' name='Estado' ordinal='20' />
-                  <column datatype='date' name='Fecha Baja o Lic' ordinal='21' />
-                  <column datatype='real' name='Proporcional x Presentismo' ordinal='22' />
-                  <column datatype='real' name='Proporcional x Curva' ordinal='23' />
-                  <column datatype='string' name='MODALIDAD DE TRABAJO' ordinal='24' />
-                  <column datatype='string' name='User Plataforma' ordinal='25' />
+              <relation connection='excel-direct.05diyh808k51rw1bl2ahj0z6jai3' name='dataset_viajes_sube' table='[dataset_viajes_sube$]' type='table'>
+                <columns gridOrigin='A1:C820:no:A1:C820:0' header='yes' outcome='6'>
+                  <column datatype='string' name='TIPO_TRANSPORTE' ordinal='0' />
+                  <column datatype='date' name='DIA' ordinal='1' />
+                  <column datatype='integer' name='CANTIDAD' ordinal='2' />
                 </columns>
               </relation>
             </properties>
             <properties context='extract'>
-              <relation name='Dotacion_A4EAB106DACB48118018148E72452D36' table='[Extract].[Dotacion_A4EAB106DACB48118018148E72452D36]' type='table' />
-            </properties>
-          </object>
-          <object caption='Worksheet' id='Worksheet_787C466E6273409B9633C37D32C8CE43'>
-            <properties context=''>
-              <relation connection='excel-direct.1hjlnbh0vb4xy512pmvsg0kap06q' name='Worksheet' table='[Worksheet$]' type='table'>
-                <columns gridOrigin='A1:F8067:no:A1:F8067:0' header='yes' lost='0' outcome='2' processed='8635'>
-                  <column datatype='string' name='Fecha Operación' ordinal='0' />
-                  <column datatype='string' name='Hora Operación' ordinal='1' />
-                  <column datatype='integer' name='payment_id' ordinal='2' />
-                  <column datatype='string' name='payment_status' ordinal='3' />
-                  <column datatype='string' name='payment_status_detail' ordinal='4' />
-                  <column datatype='string' name='Legajo Vendedor' ordinal='5' />
-                </columns>
-              </relation>
-            </properties>
-            <properties context='extract'>
-              <relation name='Worksheet_787C466E6273409B9633C37D32C8CE43' table='[Extract].[Worksheet_787C466E6273409B9633C37D32C8CE43]' type='table' />
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
             </properties>
           </object>
         </objects>
-        <relationships>
-          <relationship>
-            <expression op='='>
-              <expression op='[Legajo Vendedor]' />
-              <expression op='[Legajo]' />
-            </expression>
-            <first-end-point object-id='Worksheet_787C466E6273409B9633C37D32C8CE43' />
-            <second-end-point object-id='Dotacion_A4EAB106DACB48118018148E72452D36' />
-          </relationship>
-        </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
   </datasources>
   <worksheets>
-    <worksheet name='Sheet 1'>
+    <worksheet name='Sheet 2'>
       <layout-options>
         <title>
           <formatted-text>
-            <run>TEST1</run>
+            <run>Cantidad de Viajes en Transporte Público CABA - Bimestre (Mayo/Junio 2021)
+</run>
           </formatted-text>
         </title>
       </layout-options>
       <table>
         <view>
           <datasources>
-            <datasource caption='Worksheet+ (Multiple Connections)' name='federated.1g8x3k311pdut91fyob0m0v3ftaw' />
+            <datasource caption='dataset_viajes_sube (dataset_viajes_sube)' name='federated.1bzd1mz0xhiuqd1b50bzz16uvtqs' />
           </datasources>
-          <datasource-dependencies datasource='federated.1g8x3k311pdut91fyob0m0v3ftaw'>
-            <column datatype='integer' name='[Carga Horaria]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[Documento]' role='measure' type='quantitative' />
-            <column datatype='string' name='[Fecha Operación]' role='dimension' type='nominal' />
-            <column datatype='string' name='[Nombre]' role='dimension' type='nominal' />
-            <column datatype='real' name='[Proporcional x Curva]' role='measure' type='quantitative' />
-            <_.fcp.ObjectModelTableType.false...column caption='Dotacion' datatype='integer' name='[__tableau_internal_object_id__].[Dotacion_A4EAB106DACB48118018148E72452D36]' role='measure' type='quantitative' />
-            <column datatype='real' name='[Proporcional x Presentismo]' role='measure' type='quantitative' />
-            <_.fcp.ObjectModelTableType.false...column caption='Worksheet' datatype='integer' name='[__tableau_internal_object_id__].[Worksheet_787C466E6273409B9633C37D32C8CE43]' role='measure' type='quantitative' />
-            <_.fcp.ObjectModelTableType.true...column caption='Dotacion' datatype='table' name='[__tableau_internal_object_id__].[Dotacion_A4EAB106DACB48118018148E72452D36]' role='measure' type='quantitative' />
-            <_.fcp.ObjectModelTableType.true...column caption='Worksheet' datatype='table' name='[__tableau_internal_object_id__].[Worksheet_787C466E6273409B9633C37D32C8CE43]' role='measure' type='quantitative' />
-            <column-instance column='[__tableau_internal_object_id__].[Dotacion_A4EAB106DACB48118018148E72452D36]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Dotacion_A4EAB106DACB48118018148E72452D36:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[__tableau_internal_object_id__].[Worksheet_787C466E6273409B9633C37D32C8CE43]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Worksheet_787C466E6273409B9633C37D32C8CE43:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[payment_status]' derivation='Count' name='[cnt:payment_status:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Fecha Operación]' derivation='None' name='[none:Fecha Operación:nk]' pivot='key' type='nominal' />
-            <column-instance column='[Nombre]' derivation='None' name='[none:Nombre:nk]' pivot='key' type='nominal' />
-            <column caption='Payment Status' datatype='string' name='[payment_status]' role='dimension' type='nominal' />
-            <column-instance column='[Carga Horaria]' derivation='Sum' name='[sum:Carga Horaria:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Documento]' derivation='Sum' name='[sum:Documento:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Proporcional x Curva]' derivation='Sum' name='[sum:Proporcional x Curva:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Proporcional x Presentismo]' derivation='Sum' name='[sum:Proporcional x Presentismo:qk]' pivot='key' type='quantitative' />
+          <datasource-dependencies datasource='federated.1bzd1mz0xhiuqd1b50bzz16uvtqs'>
+            <column caption='Cantidad' datatype='integer' name='[CANTIDAD]' role='measure' type='quantitative' />
+            <column datatype='date' name='[DIA]' role='dimension' type='ordinal' />
+            <column caption='Tipo Transporte' datatype='string' name='[TIPO_TRANSPORTE]' role='dimension' type='nominal' />
+            <column-instance column='[TIPO_TRANSPORTE]' derivation='None' name='[none:TIPO_TRANSPORTE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CANTIDAD]' derivation='Sum' name='[sum:CANTIDAD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DIA]' derivation='Day-Trunc' name='[tdy:DIA:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1g8x3k311pdut91fyob0m0v3ftaw].[:Measure Names]'>
-            <groupfilter function='level-members' level='[:Measure Names]' />
+          <filter class='categorical' column='[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[none:TIPO_TRANSPORTE:nk]'>
+            <groupfilter function='level-members' level='[none:TIPO_TRANSPORTE:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:Nombre:nk]'>
-            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[none:Nombre:nk]' />
-              <groupfilter function='member' level='[none:Nombre:nk]' member='&quot;Supervisor&quot;' />
-            </groupfilter>
+          <filter class='quantitative' column='[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[tdy:DIA:qk]' included-values='in-range-or-null'>
+            <min>#2021-05-01 00:00:00#</min>
+            <max>#2021-06-30 00:00:00#</max>
           </filter>
           <slices>
-            <column>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:Nombre:nk]</column>
-            <column>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[:Measure Names]</column>
+            <column>[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[tdy:DIA:qk]</column>
+            <column>[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[none:TIPO_TRANSPORTE:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[tdy:DIA:qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[sum:CANTIDAD:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[sum:CANTIDAD:qk]' value='0' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Automatic' />
-            <mark-sizing mark-sizing-setting='marks-scaling-off' />
-            <encodings>
-              <color column='[federated.1g8x3k311pdut91fyob0m0v3ftaw].[Multiple Values]' />
-            </encodings>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='text-orientation' value='0' />
+                <format attr='vertical-align' value='top' />
+                <format attr='wrap' value='on' />
+              </style-rule>
               <style-rule element='datalabel'>
                 <format attr='color-mode' value='auto' />
-                <format attr='font-family' value='Rockwell' />
-                <format attr='font-size' value='14' />
-                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='8' />
+                <format attr='font-style' value='normal' />
+                <format attr='font-weight' value='normal' />
               </style-rule>
               <style-rule element='mark'>
-                <format attr='mark-color' value='#8cd17d' />
-                <format attr='size' value='1.4832596778869629' />
+                <format attr='mark-color' value='#86bcb6' />
+                <format attr='size' value='0' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
               </style-rule>
             </style>
           </pane>
         </panes>
-        <rows>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[cnt:payment_status:qk]</rows>
-        <cols>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:Fecha Operación:nk]</cols>
+        <rows>[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[sum:CANTIDAD:qk]</rows>
+        <cols>[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[tdy:DIA:qk]</cols>
       </table>
-      <simple-id uuid='{2F4E70DD-BB5C-48C9-9EAB-B22724175A42}' />
+      <simple-id uuid='{7915E54D-C6F0-4958-AC1D-AB69673C0064}' />
     </worksheet>
   </worksheets>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
             <card type='pages' />
-            <card type='filters' />
             <card type='marks' />
-            <card type='measures' />
+            <card type='filters' />
           </strip>
         </edge>
         <edge name='top'>
@@ -1308,109 +290,141 @@
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='radiolist' param='[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[none:TIPO_TRANSPORTE:nk]' type='filter' />
+          </strip>
+        </edge>
       </cards>
       <viewpoint>
         <highlight>
           <color-one-way>
-            <field>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:Fecha Operación:nk]</field>
-            <field>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:Legajo Vendedor:nk]</field>
-            <field>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:Nombre:nk]</field>
-            <field>[federated.1g8x3k311pdut91fyob0m0v3ftaw].[none:payment_status:nk]</field>
+            <field>[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[none:TIPO_TRANSPORTE:nk]</field>
+            <field>[federated.1bzd1mz0xhiuqd1b50bzz16uvtqs].[yr:DIA:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
-      <simple-id uuid='{82F8ED92-90AA-4415-A8D6-D1978B1AC758}' />
+      <simple-id uuid='{5C24217A-BC25-4919-86AD-BB9F54575FA7}' />
     </window>
   </windows>
   <thumbnails>
-    <thumbnail height='192' name='Sheet 1' width='192'>
+    <thumbnail height='192' name='Sheet 2' width='192'>
       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
-      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
-      7wAAAABJRU5ErkJggg==
+      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
     </thumbnail>
   </thumbnails>
 </workbook>
